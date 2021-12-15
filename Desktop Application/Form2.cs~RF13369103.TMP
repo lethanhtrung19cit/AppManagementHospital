@@ -1,0 +1,309 @@
+﻿using Bus_QuanLy;
+using DTO_QuanLy;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Desktop_Application
+{
+    public partial class Form2 : Form
+    {
+        BUS busBenhNhan = new BUS();
+
+        busBacSi busBacSi = new busBacSi();
+        busKhamBenh busKhamBenh = new busKhamBenh();
+        public Form2()
+        {
+            InitializeComponent();
+            load();
+        }
+        public void load()
+        {
+            dataGridView1.DataSource = busBenhNhan.getBenhNhan();
+            dataGridView2.DataSource = busBenhNhan.getChoKham();
+            dataGridView5.DataSource = busBacSi.getBacSi();
+            maBacSiBS.Text = busBacSi.maBacSi();
+            //maBenhAn.Enabled = false;
+            //maBenhNhan.Enabled = false;
+        }
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+            load();
+        }
+        string path = null;
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openDlg = new OpenFileDialog();
+            openDlg.Title = "Chon mot hinh anh";
+            openDlg.RestoreDirectory = true;
+            openDlg.Filter = "All images (*.bmp;*.jpg;*.gif;*.png)|*.bmp;*.jpg;*.gif;*.png";
+            openDlg.Multiselect = false;
+            if (openDlg.ShowDialog() == DialogResult.OK)
+            {
+
+                pictureBox5.Image = Image.FromFile(openDlg.FileName);
+                path = openDlg.FileName;
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            pictureBox5.Image = null;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = busBenhNhan.searchBenhNhan(timKiem.Text);
+        }
+
+        private void huytimkiem_Click(object sender, EventArgs e)
+        {
+            load();
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            string gioitinh;
+            if (nam.Checked == true) gioitinh = "Nam";
+            else gioitinh = "Nữ";
+            DTO_QuanLyBenhNhan bn = new DTO_QuanLyBenhNhan(hoTen.Text, gioitinh, ngaySinh.Text, diaChi.Text, ngheNghiep.Text, SDT.Text, doiTuong.Text, CMND.Text);
+            ChiTietKhamBenh kb = new ChiTietKhamBenh(ngayKham.Text, phongKham.Text, ChuanDoanSauCung.Text);
+
+            if (busBenhNhan.suaBenhNhan(bn, kb, maBenhNhan.Text, path))
+            {
+
+                dataGridView1.DataSource = busBenhNhan.getBenhNhan();
+            }
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            if (busBenhNhan.xoabenhnhan(maBenhNhan.Text))
+                dataGridView1.DataSource = busBenhNhan.getBenhNhan();
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            ThemBenhNhan a = new ThemBenhNhan();
+            a.Show();
+            this.Visible = false;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int num;
+            num = e.RowIndex;
+            maBenhNhan.Text = dataGridView1.Rows[num].Cells[0].Value.ToString();
+            hoTen.Text = dataGridView1.Rows[num].Cells[1].Value.ToString();
+            string gioitinh = dataGridView1.Rows[num].Cells[2].Value.ToString();
+            if (gioitinh.Equals("Nam")) nam.Checked = true;
+            else nu.Checked = true;
+            
+            string[] ngaysinh = (dataGridView1.Rows[num].Cells[3].Value.ToString()).Split(' ');
+            ngaySinh.Text = ngaysinh[0];
+            diaChi.Text = dataGridView1.Rows[num].Cells[4].Value.ToString();
+            ngheNghiep.Text = dataGridView1.Rows[num].Cells[5].Value.ToString();
+            SDT.Text = dataGridView1.Rows[num].Cells[6].Value.ToString();
+            maBenhAn.Text = dataGridView1.Rows[num].Cells[7].Value.ToString();
+
+            doiTuong.Text = dataGridView1.Rows[num].Cells[9].Value.ToString();
+            string a1 = dataGridView1.Rows[num].Cells[10].Value.ToString();
+            if (a1 != "")
+            {
+                byte[] a = (byte[])dataGridView1.Rows[num].Cells[10].Value;
+                MemoryStream ms = new MemoryStream(a);
+
+                Image img = Image.FromStream(ms);
+
+                pictureBox5.Image = img;
+            }
+            else pictureBox5.Image = null;
+            CMND.Text = dataGridView1.Rows[num].Cells[11].Value.ToString();
+            ngayKham.Text = dataGridView1.Rows[num].Cells[12].Value.ToString();
+            phongKham.Text = dataGridView1.Rows[num].Cells[13].Value.ToString();
+            ChuanDoanSauCung.Text = dataGridView1.Rows[num].Cells[14].Value.ToString();
+          
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            dataGridView2.ForeColor = Color.Black;
+            
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            load();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            dataGridView2.DataSource = busBenhNhan.searchChoKham(textBox7.Text);
+        }
+
+        private void groupBox6_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int num;
+            num = e.RowIndex;
+            maBNCK.Text = dataGridView2.Rows[num].Cells[0].Value.ToString();
+            hotenCK.Text = dataGridView2.Rows[num].Cells[1].Value.ToString();
+            gioiTinh.Text = dataGridView2.Rows[num].Cells[2].Value.ToString();
+          
+            NSCK.Text = dataGridView2.Rows[num].Cells[3].Value.ToString();
+            diaChiCK.Text = dataGridView2.Rows[num].Cells[4].Value.ToString();
+            
+            SDTCK.Text = dataGridView2.Rows[num].Cells[6].Value.ToString();
+            
+
+            
+            string a1 = dataGridView2.Rows[num].Cells[10].Value.ToString();
+            if (a1 != "")
+            {
+                byte[] a = (byte[])dataGridView2.Rows[num].Cells[10].Value;
+                MemoryStream ms = new MemoryStream(a);
+
+                Image img = Image.FromStream(ms);
+
+                pictureBox6.Image = img;
+            }
+            else pictureBox5.Image = null;
+            
+            yeuCauKhamCK.Text= dataGridView2.Rows[num].Cells[12].Value.ToString();
+            maPhieuKham.Text = dataGridView2.Rows[num].Cells[13].Value.ToString();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            load();
+        }
+
+        private void button32_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            string gioitinh;
+            if (namBS.Checked == true) gioitinh = "Nam";
+            else gioitinh = "Nữ";
+            QuanLyBacSi bs = new QuanLyBacSi(hoTenBS.Text, gioitinh, ngaySinhBS.Text, diaChiBS.Text, SDTBS.Text, CMNDBS.Text, maKhoaBS.Text, tenKhoaBS.Text, chucVuBS.Text);
+           
+
+            if (busBacSi.themBacSi(bs, maBacSiBS.Text, path))
+            {
+                MessageBox.Show("Thêm thành công");
+                load();
+            }
+            
+        }
+
+        private void button44_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openDlg = new OpenFileDialog();
+            openDlg.Title = "Chon mot hinh anh";
+            openDlg.RestoreDirectory = true;
+            openDlg.Filter = "All images (*.bmp;*.jpg;*.gif;*.png)|*.bmp;*.jpg;*.gif;*.png";
+            openDlg.Multiselect = false;
+            if (openDlg.ShowDialog() == DialogResult.OK)
+            {
+
+                pictureBox8.Image = Image.FromFile(openDlg.FileName);
+                path = openDlg.FileName;
+            }
+        }
+
+        private void button34_Click(object sender, EventArgs e)
+        {
+            string gioitinh;
+            if (namBS.Checked == true) gioitinh = "Nam";
+            else gioitinh = "Nữ";
+
+            QuanLyBacSi bs = new QuanLyBacSi(hoTenBS.Text, gioitinh, ngaySinhBS.Text, diaChiBS.Text, SDTBS.Text, CMNDBS.Text, maKhoaBS.Text, tenKhoaBS.Text, chucVuBS.Text);
+
+            if (busBacSi.suaBacSi(bs, maBacSiBS.Text, path))
+            {
+
+                dataGridView5.DataSource = busBacSi.getBacSi();
+            }
+        }
+
+        private void maBacSi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                bacSi.Text = busKhamBenh.tenBacSi(maBacSi.Text);
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ChiTietKhamBenh ctkb = new ChiTietKhamBenh(maPhieuKham.Text, nhomMau.Text, tinhTrangKhamBenh.Text, chanDoanSoBo.Text, chanDoanSauCung.Text, huongDieuTri.Text, float.Parse(canNang.Text), float.Parse(nhietDo.Text), float.Parse(mach.Text), float.Parse(huyetAp.Text), float.Parse(nhipTho.Text), maBacSi.Text, bacSi.Text, ngayKhamCK.Text, phongKhamCK.Text);
+            Danhsachchokham dsck = new Danhsachchokham(maBNCK.Text, hotenCK.Text, yeuCauKhamCK.Text);
+            if (busKhamBenh.themBenhNhan(ctkb, dsck))
+            {
+                MessageBox.Show("Thêm thành công");
+                load();
+            }
+        }
+
+        private void tabPage8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tenBenh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            ChuyenVien cv = new ChuyenVien(maBenhNhan.Text, hoTen.Text, maBenhAn.Text);
+            cv.Show();
+        }
+
+        private void button39_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button42_Click(object sender, EventArgs e)
+        {
+            dataGridView6.DataSource = busBenhNhan.thongKeBenhNhan(ngay.Text);
+        }
+
+        private void ngay_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ngay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar==13)
+            this.Dispose();
+        }
+    }
+}

@@ -1,0 +1,30 @@
+﻿using DTO_QuanLy;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DAL_QuanLy
+{
+    public class sqltaikhoan : connection
+    {
+        taikhoan tk = new taikhoan() ;
+       
+        public string tentaikhoan(taikhoan tk)
+        {
+
+            conn.Open();
+            string sql = string.Format("select MatKhau from TaiKhoan where TenDangNhap = N'{0}' and QuyenTruyCap = N'{1}'", tk.TenDangNhap, tk.QuyenTruyCap);
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            String a1 = (String)cmd.ExecuteScalar();
+            if (cmd.ExecuteScalar()== null) a1 = "null";
+            conn.Close();
+            return a1;
+           
+           
+        }
+    }
+}

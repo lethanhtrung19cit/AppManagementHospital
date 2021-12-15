@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="quanlibenhvien" Class="MyDBContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-76IH46T\SQLEXPRESS;Initial Catalog=quanlibenhvien;Persist Security Info=True;User ID=sa" SettingsObjectName="Desktop_Application.Properties.Settings" SettingsPropertyName="quanlibenhvienConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.picture1" Member="picture1s">
+    <Type Name="picture1">
+      <Column Name="img" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+</Database>

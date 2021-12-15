@@ -1,0 +1,58 @@
+c:\users\trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Desktop Application.exe.config
+c:\users\trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Desktop Application.exe
+c:\users\trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Desktop Application.pdb
+c:\users\trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Properties.Resources.resources
+c:\users\trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop Application.csproj.GenerateResource.Cache
+c:\users\trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop Application.exe
+c:\users\trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop Application.pdb
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Benhnhan.resources
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\QLBV.mdf
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\QLBV_log.ldf
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\DAL_QuanLy.dll
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\DTO_QuanLy.dll
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\DAL_QuanLy.pdb
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\DTO_QuanLy.pdb
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Bus_QuanLy.dll
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Bus_QuanLy.pdb
+C:\Users\Trung\documents\visual studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.ThemBenhNhan.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop Application.csprojAssemblyReference.cache
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop Application.csproj.CoreCompileInputs.cache
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop Application.csproj.CopyComplete
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.ThongKe.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Dichvu.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Form2.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Bacsi.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Dieutrinoitru.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.ChuyenVien.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.CapThuoc.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.ThanhToan.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.HoaDonThanhToan.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Xuatvien.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Form1.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Form3.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.ReportViewer.DataVisualization.DLL
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.ReportViewer.Design.DLL
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.ReportViewer.WebDesign.DLL
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.ReportViewer.WinForms.DLL
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\EnvDTE.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\EnvDTE80.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\stdole.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\bin\Debug\Microsoft.MSXML.dll
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Dangnhap.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.doiMatKhau.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.Dangki.resources
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop Application.csproj.ResolveComReference.cache
+C:\Users\Trung\Documents\Visual Studio 2012\Projects\Desktop Application\Desktop Application\obj\Debug\Desktop_Application.fSystemMgn.resources
